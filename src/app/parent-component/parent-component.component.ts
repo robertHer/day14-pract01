@@ -7,10 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ParentComponentComponent implements OnInit {
   childTitle:string = 'text passed to child';
+  passedString:string = '';
   // title = "i'm a nested component"
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onNotify(notify: string){
+    this.passedString = notify;
+    console.log(notify)
   }
 
 }
